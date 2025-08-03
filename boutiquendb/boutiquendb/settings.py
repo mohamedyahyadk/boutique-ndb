@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'ndb_app'
 ]
 
 MIDDLEWARE = [
@@ -76,7 +77,7 @@ DATABASES = {
     'default': {
         # 'ENGINE': 'django.db.backends.sqlite3',
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'boutiquendb',
+        'NAME': 'boutique_ndb',
         'USER': 'boutiquendb_user',
         'PASSWORD': 'LOy3L3KdEOa54BbnhsrUCYK1Shws4vBg',
         'HOST': 'dpg-d27jq9ndiees73cmph50-a',
