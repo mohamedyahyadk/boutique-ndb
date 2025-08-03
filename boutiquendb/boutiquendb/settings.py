@@ -76,10 +76,10 @@ DATABASES = {
     'default': {
         # 'ENGINE': 'django.db.backends.sqlite3',
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'railway',
-        'USER': 'postgres',
-        'PASSWORD': 'suUKhvOlPNFbAbbxeLyWryzZjpHlvRKg',
-        'HOST': 'postgres.railway.internal',
+        'NAME': 'boutiquendb',
+        'USER': 'boutiquendb_user',
+        'PASSWORD': 'LOy3L3KdEOa54BbnhsrUCYK1Shws4vBg',
+        'HOST': 'dpg-d27jq9ndiees73cmph50-a',
         'PORT': '5432',
     }
 }
