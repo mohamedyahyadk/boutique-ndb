@@ -77,11 +77,11 @@ DATABASES = {
     'default': {
         # 'ENGINE': 'django.db.backends.sqlite3',
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'boutique_ndb',
-        'USER': 'boutiquendb_user',
-        'PASSWORD': 'LOy3L3KdEOa54BbnhsrUCYK1Shws4vBg',
-        'HOST': 'dpg-d27jq9ndiees73cmph50-a',
-        'PORT': '5432',
+        'NAME': config("DB_NAME"),
+        'USER': config("DB_USER"),
+        'PASSWORD': config("DB_PASSWORD"),
+        'HOST': config("DB_HOST"),
+        'PORT': config("DB_PORT"),
     }
 }
 
