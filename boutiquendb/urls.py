@@ -22,5 +22,5 @@ def home(request):
     return HttpResponse("welcome to my father")
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',home)
+    path('',home),
 ]
