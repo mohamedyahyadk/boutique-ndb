@@ -1,0 +1,24 @@
+{% extends "base.html" %} {% load static %} {% block content %}
+<section class="product_detatils">
+  <article class="product_detatils_article">
+    <div class="product_detatils_image">
+      <img
+        class="product_detatils_image"
+        src="{{ product.image.url }}"
+        alt=""
+      />
+    </div>
+    <div class="product_detatils_texts">
+      <p>{{product.name}}</p>
+      <p>{{product.price}}</p>
+      <button class="product_detatils_btn">أضف للسلة</button>
+    </div>
+  </article>
+  <div class="product_detatils_wasf">
+    <h1>وصف المنتح</h1>
+  </div>
+  <div class="product_detatils_descri">
+    <p>{{product.description}}</p>
+  </div>
+</section>
+{% endblock content %}

@@ -1,0 +1,26 @@
+{% extends "base.html" %} {% load static %} {% block content %}
+<section class="products_section">
+  {% for p in products %}
+  <a href="/ndb_app/{{p.id}}">
+    <figure class="products_section_product">
+      <img
+        class="products_section_product_image"
+        src="{{ p.image.url }}"
+        alt="product"
+      />
+
+      <p>{{p.name}}</p>
+      <p>{{p.price}}</p>
+      <div class="products_section_product_btns">
+        <button class="products_section_product_btn">اضافة الي السلة</button>
+        <div class="products_section_product_btns_botom">
+          <button class="products_section_product_btn">+</button>
+          <p class="products_section_product_quantity">1</p>
+          <button class="products_section_product_btn">-</button>
+        </div>
+      </div>
+    </figure>
+  </a>
+  {% endfor %}
+</section>
+{% endblock content %}

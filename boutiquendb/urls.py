@@ -14,13 +14,19 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.contrib import admin
-from django.urls import path
-from django.http import HttpResponse
 
-def home(request):
-    return HttpResponse("welcome to my father")
+from django.contrib import admin
+from django.urls import include, path
+from django.http import HttpResponse
+from django.conf import settings
+from django.conf.urls.static import static
+# def home(request):
+#     return HttpResponse("welcome to my father")
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',home),
+    path('ndb_app/',include('ndb_app.urls'), name='ndb_app')
+   
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

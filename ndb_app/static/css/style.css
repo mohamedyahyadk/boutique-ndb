@@ -139,6 +139,7 @@ header {
   background-color: blue;
   color: white;
   padding: 5px 10px 5px 10px;
+  border: none;
 }
 .products_section_product_quantity {
   display: flex;
@@ -156,6 +157,56 @@ header {
   /* gap: 5px; */
 }
 
+/* product detail.html */
+.product_detatils {
+  display: flex;
+  flex-direction: column;
+  /* background-color: aqua; */
+}
+.product_detatils_article {
+  display: flex;
+  flex-direction: row;
+  background-color: antiquewhite;
+  justify-content: center;
+  padding: 10px 10px 10px 10px;
+  margin: 10px 50px 10px 50px;
+  gap: 20px;
+  /* border: 5px solid red; */
+}
+.product_detatils_image {
+  display: flex;
+  /* flex-direction: ; */
+}
+.product_detatils_texts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 50px;
+  /* background-color: azure; */
+}
+.product_detatils_wasf {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: antiquewhite;
+  margin: 10px 50px 10px 50px;
+}
+.product_detatils_descri {
+  display: flex;
+  flex-direction: row;
+  background-color: antiquewhite;
+  padding: 10px 10px 10px 10px;
+  margin: 10px 50px 10px 50px;
+}
+.product_detatils_btn {
+  display: flex;
+  flex-direction: row;
+  background-color: blue;
+  color: white;
+  gap: 20px;
+  padding: 10px 100px 5px 100px;
+}
 /* footer */
 footer {
   background-color: grey;

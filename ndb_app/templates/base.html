@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ndb-boutique</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+
+    <!-- <link rel="stylesheet" href="css/style.css" /> -->
+  </head>
+  <body>
+    <header>
+      <div class="header_top">
+        <img
+          class="header_top_logo"
+          src="{% static 'images/logo/logo.png' %}"
+          alt=""
+        />
+        <div>
+          <input
+            class="header_top_input"
+            type="text"
+            placeholder="search here"
+          />
+        </div>
+        <img
+          class="header_top_logo"
+          src="{% static 'images/logo/logo.png' %}"
+          alt=""
+        />
+      </div>
+      <nav class="header_navbar">
+        <!-- <a class="header_navbar_link" href="#">السلة</a> -->
+        <a class="header_navbar_link" href="{% url 'qr_page' %}">الكي ار كود</a>
+        <!-- <a class="header_navbar_link" href="#">من نحن</a> -->
+        <a class="header_navbar_link" href="/ndb_app/">العطور</a>
+        <!-- <a class="header_navbar_link" href="#">الرئيسية</a> -->
+      </nav>
+    </header>
+    <main>{% block content %} {% endblock content %}</main>
+    <footer>all rgight are reserved</footer>
+  </body>
+</html>
