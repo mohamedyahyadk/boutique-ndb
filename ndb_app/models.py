@@ -8,7 +8,7 @@ from django.db import models
 class Category(models.Model):
     name = models.CharField(max_length=100)
     description = models.TextField(blank=True)
-    qr_code_id = models.CharField(max_length=100, unique=True)  # To map QR codes to corners
+    # qr_code_id = models.CharField(max_length=100, unique=True)  # To map QR codes to corners
 
     def __str__(self):
         return self.name

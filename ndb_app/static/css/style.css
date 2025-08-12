@@ -17,6 +17,7 @@ body {
   overflow-x: hidden;
 }
 /*-------------------------------- index page----------------------- */
+
 /* header_top */
 header {
   display: flex;
@@ -47,6 +48,14 @@ header {
   flex-direction: row;
   justify-content: flex-start;
 }
+/*  */
+/* hero */
+.hero {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: gray;
+}
 /* header_navbar */
 .header_navbar {
   background-color: beige;
@@ -75,6 +84,7 @@ header {
 }
 
 /* main */
+
 .main {
   display: flex;
   flex-direction: column;

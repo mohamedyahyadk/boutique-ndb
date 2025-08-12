@@ -1,13 +1,19 @@
 from django.shortcuts import render
 from django.urls import reverse
 from ndb_app.models import Product
+
+
+import qrcode
+from django.http import HttpResponse
+from io import BytesIO
+
 # Create your views here.
-def home(request):
+def index(request):
     produts=Product.objects.all()
     context={
         'products':produts
     }
-    return render(request,'home.html',context)
+    return render(request,'index.html',context)
 
 def product_details(request,pk):
     product=Product.objects.get(id=pk)
@@ -15,9 +21,6 @@ def product_details(request,pk):
         'product':product
     }
     return render(request,'product.html',product)
-import qrcode
-from django.http import HttpResponse
-from io import BytesIO
 
 def generate_qr(request, url_path):
     # Example: url_path = 'ndb_app/perfumes/'
@@ -32,5 +35,5 @@ def generate_qr(request, url_path):
 
 def qr_page(request):
     # The target URL you want the QR to link to (e.g., perfume category)
-    target_url = reverse('ndb_app')  # use your real route name
+    target_url = reverse('index')  # use your real route name
     return render(request, 'qr_code.html', {'target_url': target_url})
