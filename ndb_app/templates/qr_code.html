@@ -1,5 +1,5 @@
+{% load static %}
 <!DOCTYPE html>
-{% load staticfiles %}
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -39,28 +39,13 @@
       </nav>
     </header>
     <main>
-      <section class="product_detatils">
-        <article class="product_detatils_article">
-          <div class="product_detatils_image">
-            <img
-              class="product_detatils_image"
-              src="{{ product.image.url }}"
-              alt=""
-            />
-          </div>
-          <div class="product_detatils_texts">
-            <p>{{product.name}}</p>
-            <p>{{product.price}}</p>
-            <button class="product_detatils_btn">أضف للسلة</button>
-          </div>
-        </article>
-        <div class="product_detatils_wasf">
-          <h1>وصف المنتح</h1>
-        </div>
-        <div class="product_detatils_descri">
-          <p>{{product.description}}</p>
-        </div>
-      </section>
+      <div>
+        <h2>generate qrcode</h2>
+        <img
+          src="{% url 'generate_qr' target_url  %}"
+          alt="QR code to perfumes"
+        />
+      </div>
     </main>
     <!-- <footer>all rgight are reserved</footer> -->
   </body>
