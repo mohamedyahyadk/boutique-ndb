@@ -13,14 +13,14 @@ def index(request):
     context={
         'products':produts
     }
-    return render(request,'index.html',context)
+    return render(request,'ndb_app/index.html',context)
 
 def product_details(request,pk):
     product=Product.objects.get(id=pk)
     product={
         'product':product
     }
-    return render(request,'product.html',product)
+    return render(request,'ndb_app/product.html',product)
 
 def generate_qr(request, url_path):
     # Example: url_path = 'ndb_app/perfumes/'
