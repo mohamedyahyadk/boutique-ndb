@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = config("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS =config("ALLOWED_HOSTS",cast=Csv())
 
@@ -73,39 +73,39 @@ WSGI_APPLICATION = 'boutiquendb.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
-USE_SQLITE = config("USE_SQLITE", default=True, cast=bool)
-if USE_SQLITE:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': BASE_DIR / "db.sqlite3",
-        }
-    }
-else:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.postgresql',
-            'NAME': config("DB_NAME"),
-            'USER': config("DB_USER"),
-            'PASSWORD': config("DB_PASSWORD"),
-            'HOST': config("DB_HOST"),
-            'PORT': config("DB_PORT"),
-        }
-    }
+# USE_SQLITE = config("USE_SQLITE", default=True, cast=bool)
+# if USE_SQLITE:
+#     DATABASES = {
+#         'default': {
+#             'ENGINE': 'django.db.backends.sqlite3',
+#             'NAME': BASE_DIR / "db.sqlite3",
+#         }
+#     }
+# else:
+#     DATABASES = {
+#         'default': {
+#             'ENGINE': 'django.db.backends.postgresql',
+#             'NAME': config("DB_NAME"),
+#             'USER': config("DB_USER"),
+#             'PASSWORD': config("DB_PASSWORD"),
+#             'HOST': config("DB_HOST"),
+#             'PORT': config("DB_PORT"),
+#         }
+#     }
 
 
-# DATABASES = {
-#     'default': {
+DATABASES = {
+    'default': {
        
         
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': config("DB_NAME"),
-#         'USER': config("DB_USER"),
-#         'PASSWORD': config("DB_PASSWORD"),
-#         'HOST': config("DB_HOST"),
-#         'PORT': config("DB_PORT"),
-#     }
-# }
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': config("DB_NAME"),
+        'USER': config("DB_USER"),
+        'PASSWORD': config("DB_PASSWORD"),
+        'HOST': config("DB_HOST"),
+        'PORT': config("DB_PORT"),
+    }
+}
 
 
 # Password validation
